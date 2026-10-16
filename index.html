@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="vi">
 <head>
@@ -6,43 +7,125 @@
   <meta name="theme-color" content="#176b45">
   <meta name="description" content="KVN Improvement - Trang quản lý duyệt đề xuất">
   <title>KVN Improvement - Quản lý duyệt</title>
+
   <style>
-    * { box-sizing: border-box; }
-    body { margin:0; min-height:100vh; display:grid; place-items:center; padding:24px;
-      background:#f2f6f3; color:#20312a; font-family:Arial,Helvetica,sans-serif; }
-    main { width:min(100%,560px); padding:clamp(24px,5vw,42px); text-align:center;
-      background:#fff; border:1px solid #dce7e0; border-radius:20px;
-      box-shadow:0 12px 36px rgba(18,66,43,.08); }
-    .logo { width:72px; height:72px; display:grid; place-items:center; margin:0 auto 14px;
-      border-radius:20px; background:#176b45; color:#fff; font-size:25px; font-weight:800; }
-    h1 { margin:0; color:#176b45; font-size:clamp(25px,5vw,34px); }
-    p { color:#65756d; line-height:1.6; }
-    .button { display:inline-flex; align-items:center; justify-content:center; width:100%;
-      min-height:52px; padding:14px 18px; border-radius:12px; background:#176b45;
-      color:white; text-decoration:none; font-weight:700; }
-    .button:hover { background:#105538; }
-    .status { min-height:24px; margin-top:14px; color:#65756d; font-size:13px; }
-    a.fallback { color:#0879c9; overflow-wrap:anywhere; font-size:13px; }
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      background: #f2f6f3;
+      color: #20312a;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    main {
+      width: min(100%, 560px);
+      padding: clamp(24px, 5vw, 42px);
+      text-align: center;
+      background: #fff;
+      border: 1px solid #dce7e0;
+      border-radius: 20px;
+      box-shadow: 0 12px 36px rgba(18, 66, 43, .08);
+    }
+
+    .logo {
+      width: 72px;
+      height: 72px;
+      display: grid;
+      place-items: center;
+      margin: 0 auto 14px;
+      border-radius: 20px;
+      background: #176b45;
+      color: #fff;
+      font-size: 25px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0;
+      color: #176b45;
+      font-size: clamp(25px, 5vw, 34px);
+    }
+
+    p {
+      color: #65756d;
+      line-height: 1.6;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      min-height: 52px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: 12px;
+      background: #176b45;
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      background: #105538;
+    }
+
+    .status {
+      min-height: 24px;
+      margin-top: 14px;
+      color: #65756d;
+      font-size: 13px;
+    }
+
+    .fallback {
+      display: inline-block;
+      margin-top: 8px;
+      color: #0879c9;
+      overflow-wrap: anywhere;
+      font-size: 13px;
+    }
   </style>
-  <script>
-    const APP_URL = 'https://script.google.com/a/macros/krugersf.com/s/AKfycbzNcaqO9EyuHjcKuE-RFkfgcGQG5Q4rqUSH5BETzaEFTzaD6nGsRIsMuv_TD-VGHvMIQA/exec?page=manager';
-    window.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('openManager').href = APP_URL;
-      document.getElementById('fallback').href = APP_URL;
-      document.getElementById('status').textContent = 'Đang mở trang quản lý duyệt…';
-      // Tự chuyển trang; nút bên dưới vẫn dùng được nếu trình duyệt chặn chuyển hướng.
-      setTimeout(() => window.location.replace(APP_URL), 500);
-    });
-  </script>
 </head>
+
 <body>
   <main>
     <div class="logo" aria-hidden="true">KVN</div>
+
     <h1>KVN IMPROVEMENT</h1>
     <p>TRANG QUẢN LÝ DUYỆT ĐỀ XUẤT</p>
-    <a id="openManager" class="button" href="https://script.google.com/a/macros/krugersf.com/s/AKfycbzNcaqO9EyuHjcKuE-RFkfgcGQG5Q4rqUSH5BETzaEFTzaD6nGsRIsMuv_TD-VGHvMIQA/exec?page=manager">Mở trang quản lý</a>
-    <div id="status" class="status">Nếu trang không tự chuyển, nhấn nút bên trên.</div>
-    <a id="fallback" class="fallback" href="https://script.google.com/a/macros/krugersf.com/s/AKfycbzNcaqO9EyuHjcKuE-RFkfgcGQG5Q4rqUSH5BETzaEFTzaD6nGsRIsMuv_TD-VGHvMIQA/exec?page=manager">Mở trang quản lý trực tiếp</a>
+
+    <a
+      id="openManager"
+      class="button"
+      href="https://script.google.com/a/macros/krugersf.com/s/AKfycbzNcaqO9EyuHjcKuE-RFkfgcGQG5Q4rqUSH5BETzaEFTzaD6nGsRIsMuv_TD-VGHvMIQA/exec?page=manager"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      MỞ TRANG QUẢN LÝ
+    </a>
+
+    <div id="status" class="status">
+      Nhấn nút phía trên để mở trang đăng nhập quản lý trong tab mới.
+    </div>
+
+    <a
+      class="fallback"
+      href="https://script.google.com/a/macros/krugersf.com/s/AKfycbzNcaqO9EyuHjcKuE-RFkfgcGQG5Q4rqUSH5BETzaEFTzaD6nGsRIsMuv_TD-VGHvMIQA/exec?page=manager"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      Mở trang quản lý trực tiếp
+    </a>
   </main>
 </body>
 </html>
+
